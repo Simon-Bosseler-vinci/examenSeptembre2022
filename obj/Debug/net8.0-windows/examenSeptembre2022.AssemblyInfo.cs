@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("examenSeptembre2022")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+efbd81bb0f8ce5354cfc7247ac45ad1758e77cbd")]
 [assembly: System.Reflection.AssemblyProductAttribute("examenSeptembre2022")]
 [assembly: System.Reflection.AssemblyTitleAttribute("examenSeptembre2022")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

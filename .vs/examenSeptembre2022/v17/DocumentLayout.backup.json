@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "ViewModels\\ProductSales.cs",
               "ToolTip": "C:\\Users\\Home\\source\\repos\\examenSeptembre2022\\ViewModels\\ProductSales.cs",
               "RelativeToolTip": "ViewModels\\ProductSales.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-08T21:24:14.835Z",
               "EditorCaption": ""
@@ -53,7 +53,7 @@
               "RelativeDocumentMoniker": "ViewModels\\ProductModel.cs",
               "ToolTip": "C:\\Users\\Home\\source\\repos\\examenSeptembre2022\\ViewModels\\ProductModel.cs",
               "RelativeToolTip": "ViewModels\\ProductModel.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAUwAgAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwC0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-08T15:53:29.16Z",
               "EditorCaption": ""
@@ -66,7 +66,7 @@
               "RelativeDocumentMoniker": "ViewModels\\ProductsVM.cs",
               "ToolTip": "C:\\Users\\Home\\source\\repos\\examenSeptembre2022\\ViewModels\\ProductsVM.cs",
               "RelativeToolTip": "ViewModels\\ProductsVM.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAwwGYAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-08T15:53:01.403Z",
               "EditorCaption": ""
@@ -80,7 +80,8 @@
               "ToolTip": "C:\\Users\\Home\\source\\repos\\examenSeptembre2022\\Views\\MainWindow.xaml",
               "RelativeToolTip": "Views\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-08T15:56:55.298Z"
+              "WhenOpened": "2025-01-08T15:56:55.298Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -24,16 +24,28 @@ namespace examenSeptembre2022.ViewModels
         public string ProductName
         {
             get { return _myProduct.ProductName; }
+            set
+            {
+                _myProduct.ProductName = value;
+            }
         }
 
         public string ContactName
         {
             get { return _myProduct.Supplier.ContactName; }
+            set
+            {
+                _myProduct.Supplier.ContactName = value;
+            }
         }
 
         public string QuantityPerUnit
         {
             get { return _myProduct.QuantityPerUnit; }
+            set
+            {
+                _myProduct.QuantityPerUnit= value;
+            }
         }
     }
 }

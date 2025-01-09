@@ -93,16 +93,17 @@ namespace examenSeptembre2022.ViewModels
 
         public ObservableCollection<ProductSales> loadProductsSales()
         {
-            var totalVentesParProduit = northwindContext.OrderDetails
-             .GroupBy(od => od.ProductId)
-             .Select(g => new ProductSales
-             {
-                 ProductId = g.Key,
-                 TotalSales = g.Sum(od => od.Quantity * (od.UnitPrice))
-             })
-             .ToList();
+            var sales = from orderDetail in northwindContext.OrderDetails
+                        group orderDetail by orderDetail.ProductId into productGroup
+                        select new ProductSales
+                        {
+                            ProductId = productGroup.Key,
+                            TotalSales = productGroup.Sum(od => od.UnitPrice * od.Quantity)
+                        };
 
-            return new ObservableCollection<ProductSales>(totalVentesParProduit);
+            ObservableCollection<ProductSales> productSalesList = new ObservableCollection<ProductSales>(sales);
+
+            return productSalesList;
         }
     }
 }

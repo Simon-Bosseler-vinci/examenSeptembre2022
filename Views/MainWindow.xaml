@@ -14,7 +14,7 @@
         <!-- Template pour les ventes -->
         <DataTemplate x:Key="listSales">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{Binding ProductName}" Margin="5,0"/>
+                <TextBlock Text="{Binding ProductId}" Margin="5,0"/>
                 <TextBlock Text="{Binding TotalSales}" Margin="5,0"/>
             </StackPanel>
         </DataTemplate>
@@ -32,7 +32,6 @@
         </Grid.RowDefinitions>
 
         <!-- Liste des produits -->
-        <Border Grid.Row="0" Margin="5" BorderBrush="Gray" BorderThickness="1">
             <ListBox
                 Name="Products"
                 ItemsSource="{Binding ProductList}"
@@ -40,74 +39,31 @@
                 SelectedItem="{Binding SelectedProduct}"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Stretch"/>
-        </Border>
 
-        <!-- Détails des produits -->
-        <Border Grid.Row="1" Margin="5,10,5,0" BorderBrush="Gray" BorderThickness="1">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
+            <!-- StackPanel pour afficher et modifier les informations du produit sélectionné -->
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="350,30,0,0" Grid.Row="1">
+            <TextBlock Text="Product ID:" FontWeight="Bold" />
+            <TextBlock Text="{Binding SelectedProduct.ProductId}" />
 
-                <!-- Labels -->
-                <Label Content="ProductID" Grid.Row="0" Grid.Column="0" Margin="5"/>
-                <Label Content="ProductName" Grid.Row="1" Grid.Column="0" Margin="5"/>
-                <Label Content="SupplierContactName" Grid.Row="2" Grid.Column="0" Margin="5"/>
-                <Label Content="QuantityPerUnit" Grid.Row="3" Grid.Column="0" Margin="5"/>
+            <TextBlock Text="Product name:" FontWeight="Bold" />
+            <TextBox Text="{Binding SelectedProduct.ProductName, UpdateSourceTrigger=PropertyChanged}" Margin="10" />
 
-                <!-- Champs -->
-                <TextBlock Name="ProductID"
-                           Text="{Binding SelectedProduct.ProductId}"
-                           Grid.Row="0" Grid.Column="1"
-                           Margin="5"
-                           VerticalAlignment="Center"
-                           IsHitTestVisible="False"/>
+            <TextBlock Text="Fournisseur:" FontWeight="Bold" />
+            <TextBlock Text="{Binding SelectedProduct.ContactName}" />
 
-                <TextBlock Name="ProductName"
-                           Text="{Binding SelectedProduct.ProductName}"
-                           Grid.Row="1" Grid.Column="1"
-                           Margin="5"
-                           VerticalAlignment="Center"/>
+            <TextBlock Text="Catégorie:" FontWeight="Bold" />
+            <TextBox Text="{Binding SelectedProduct.QuantityPerUnit, UpdateSourceTrigger=PropertyChanged}" Margin="10" />
 
-                <TextBlock Name="ContactName"
-                           Text="{Binding SelectedProduct.ContactName}"
-                           Grid.Row="2" Grid.Column="1"
-                           Margin="5"
-                           VerticalAlignment="Center"
-                           IsHitTestVisible="False"/>
+            <Button Content="Mettre à jour" Command="{Binding UpdateCommand}" Margin="10"/>
+        </StackPanel>
 
-                <TextBlock Name="QuantityPerUnit"
-                           Text="{Binding SelectedProduct.QuantityPerUnit}"
-                           Grid.Row="3" Grid.Column="1"
-                           Margin="5"
-                           VerticalAlignment="Center"/>
+        <!-- Deuxième ListBox pour afficher les ventes par produit -->
+        <ListBox x:Name="productComboBoxv2"
+                 ItemsSource="{Binding ProductSalesList}"  
+                 ItemTemplate="{StaticResource listSales}" 
+                 HorizontalAlignment="Left" VerticalAlignment="Top" 
+                 Width="300" Height="80" Grid.Row="2" Margin="20">
+        </ListBox>
 
-                <!-- Bouton Maj -->
-                <Button Content="Maj"
-                        Grid.Row="4"
-                        Grid.ColumnSpan="2"
-                        HorizontalAlignment="Right"
-                        Margin="5"
-                        Command="{Binding UpdateCommand}"/>
-            </Grid>
-        </Border>
-
-        <!-- Liste des ventes -->
-        <Border Grid.Row="2" Margin="5" BorderBrush="Gray" BorderThickness="1">
-            <ListBox
-                Name="SalesList"
-                ItemsSource="{Binding ProductSalesList}"
-                ItemTemplate="{StaticResource listSales}"
-                HorizontalAlignment="Stretch"
-                VerticalAlignment="Stretch"/>
-        </Border>
     </Grid>
 </Window>

@@ -145,3 +145,4 @@ C:\Users\Home\source\repos\examenSeptembre2022\obj\Debug\net8.0-windows\Views\Ma
 C:\Users\Home\source\repos\examenSeptembre2022\obj\Debug\net8.0-windows\Views\MainWindow.baml
 C:\Users\Home\source\repos\examenSeptembre2022\bin\Debug\net8.0-windows\Castle.Core.dll
 C:\Users\Home\source\repos\examenSeptembre2022\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\Home\source\repos\examenSeptembre2022\obj\Debug\net8.0-windows\examenSeptembre2022.sourcelink.json
